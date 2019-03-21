@@ -13,49 +13,32 @@ public class ControlFlowExercises {
 //        Create a while loop that runs so long as i is less than or equal to 15
 //        Each loop iteration, output the current value of i, then increment i by one.
 //        Your output should look like this:
+//          5 6 7 8 9 10 11 12 13 14 15
 
 
 //        int i = 5;
 //
 //        while (i <= 15) {
-//            System.out.println(i++);
+//            System.out.print(i + " ");
+//            i++;
 //        }
 
 //
-//        5 6 7 8 9 10 11 12 13 14 15
 //
 //        Do While
 //
 //        b. Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 
-        // example do-while loop
-//        int count = 1;
-//        do {
-//            System.out.println("Count is: " + count);
-//            count++;
-//        } while (count < 11);
 
-//
 //        int x = 0;
 //        do {
-//            System.out.println();
-//                x++;
-//        } while (x <=10);
-
-        // DOESN'T WORK
-
-//        int x = 1;
-//        do {
-//            if (x % 2  == 0) {
 //                System.out.println(x);
-//                x++;
-//            }
+//                x+=2;
+//
 //        } while (x <= 100);
 
 
 //        Alter your loop to count backwards by 5's from 100 to -10.
-
-        // THIS WORKS
 
 //        int j = 100;
 //        do {
@@ -72,7 +55,7 @@ public class ControlFlowExercises {
 //        256
 //        65536
 
-        // THIS WORKS
+        // THIS WORKS if you use long because the int data type gets too full
 
 //        long k = 2;
 //        do {
@@ -144,7 +127,7 @@ public class ControlFlowExercises {
 //        }
 
 
-//        Display a table of powers.
+//        3. Display a table of powers.
 //
 //                Prompt the user to enter an integer.
 //        Display a table of squares and cubes from 1 to the value entered.
@@ -193,33 +176,46 @@ public class ControlFlowExercises {
 //        } while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
 
 
+    //4. Convert given number grades into letter grades.
+    //
+    //Prompt the user for a numerical grade from 0 to 100.
+    //Display the corresponding letter grade.
+    //Prompt the user to continue.
+    //Assume that the user will enter valid integers for the grades.
+    //The application should only continue if the user agrees to.
+    //Grade Ranges:
+    //
+    //A : 100 - 88
+    //B : 87 - 80
+    //C : 79 - 67
+    //D : 66 - 60
+    //F : 59 - 0
 
-
-
+//        String userGrade;
 //
+//        do {
+//            System.out.println("Enter a numerical grade.");
+//
+//            int grade = scanner.nextInt();
+//
+//            if (grade >= 88 && grade <= 100) {
+//                System.out.println("You have an A");
+//            } else if (grade >= 80 && grade <= 87) {
+//                System.out.println("You have a B");
+//            } else if (grade >= 67 && grade <= 79) {
+//                System.out.println("You have a C");
+//            } else if (grade >= 60 && grade <= 66) {
+//                System.out.println("You have a D");
+//            } else {
+//                System.out.println("You have an F");
+//            }
+//
+//            System.out.println("Do you want to print another number?");
+//            userGrade = scanner.next();
+//        } while (userGrade.equalsIgnoreCase("y") || userGrade.equalsIgnoreCase("yes"));
 
-        String userGrade;
 
-        do {
-            System.out.println("Enter a numerical grade.");
 
-            int grade = scanner.nextInt();
-
-            if (grade >= 88 && grade <= 100) {
-                System.out.println("You have an A");
-            } else if (grade >= 80 && grade <= 87) {
-                System.out.println("You have a B");
-            } else if (grade >= 67 && grade <= 79) {
-                System.out.println("You have a C");
-            } else if (grade >= 60 && grade <= 66) {
-                System.out.println("You have a D");
-            } else {
-                System.out.println("You have an F");
-            }
-
-            System.out.println("Do you want to print another number?");
-            userGrade = scanner.next();
-        } while (userGrade.equalsIgnoreCase("y") || userGrade.equalsIgnoreCase("yes"));
 
 
         //Don't go below this!
