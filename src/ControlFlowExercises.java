@@ -168,45 +168,60 @@ public class ControlFlowExercises {
 //        4      | 16      | 64
 //        5      | 25      | 125
 
-        String userInput;
+//        String userInput;
+//
+//        do {
+//            System.out.println("What number would you like to go up to?");
+//
+//            int input = scanner.nextInt();
+//
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | ------");
+//
+//
+//            for (int t = 1; t <= input; t++) {
+//                int tsq = (int) Math.pow(t, 2);
+//                int tcu = (int) Math.pow(t, 3);
+//
+//                System.out.printf("%-6d | %-7d | %-6d%n", t, tsq, tcu);
+//
+//            }
+//            System.out.println("Do you want to print another number?");
+//            userInput = scanner.next();
+//
+//        } while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
+
+
+
+
+
+//
+
+        String userGrade;
 
         do {
-            System.out.println("What number would you like to go up to?");
+            System.out.println("Enter a numerical grade.");
 
-            int input = scanner.nextInt();
+            int grade = scanner.nextInt();
 
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | ------");
-
-
-            for (int t = 1; t <= input; t++) {
-                int tsq = (int) Math.pow(t, 2);
-                int tcu = (int) Math.pow(t, 3);
-
-                System.out.printf("%-6d | %-7d | %-6d%n", t, tsq, tcu);
-
+            if (grade >= 88 && grade <= 100) {
+                System.out.println("You have an A");
+            } else if (grade >= 80 && grade <= 87) {
+                System.out.println("You have a B");
+            } else if (grade >= 67 && grade <= 79) {
+                System.out.println("You have a C");
+            } else if (grade >= 60 && grade <= 66) {
+                System.out.println("You have a D");
+            } else {
+                System.out.println("You have an F");
             }
+
             System.out.println("Do you want to print another number?");
-            userInput = scanner.next();
+            userGrade = scanner.next();
+        } while (userGrade.equalsIgnoreCase("y") || userGrade.equalsIgnoreCase("yes"));
 
-        } while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
 
+        //Don't go below this!
     }
-
-
-
-
-//
-//        System.out.println("Enter a numerical grade.");
-//
-//        int grade = scanner.nextInt();
-//
-//        if(grade >87 && grade < 100){
-//            System.out.println("You have an A");
-//        }
-
-
-
-
 }
