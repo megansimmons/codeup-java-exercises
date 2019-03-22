@@ -19,28 +19,52 @@ public class Bob {
 
 
 
-        String bob = " ";
-        String otherPerson;
-        String answer = " ";
+//        String bob = " ";
+//        String otherPerson;
+//        String answer = " ";
+//        do {
+//            System.out.println("Attempt conversation.");
+//            otherPerson = scanner.nextLine();
+//
+//            if (otherPerson.endsWith("?")) {
+//                bob = "Sure";
+//
+//            } else if (otherPerson.endsWith("!")) {
+//                bob = "Whoa, chill out!";
+//            } else if (otherPerson.isEmpty()) {
+//                bob = "Fine. Be that way!";
+//            } else {
+//                bob = "Whatever";
+//            }
+//            System.out.println(bob);
+//            System.out.println("Do you want to continue attempt?");
+//            answer = scanner.nextLine();
+//        } while (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes"));
+
+
+        //Walk thru version of Bob
+
+        boolean bobIsStillTalking = true;
         do {
-            System.out.println("Attempt conversation.");
-            otherPerson = scanner.nextLine();
-
-            if (otherPerson.endsWith("?")) {
-                bob = "Sure";
-
-            } else if (otherPerson.endsWith("!")) {
-                bob = "Whoa, chill out!";
-            } else if (otherPerson.isEmpty()) {
-                bob = "Fine. Be that way!";
-            } else {
-                bob = "Whatever";
+            System.out.println("Say something to Bob:");
+            String convoAttempt = scanner.nextLine();
+            //check to see if empty
+            if(convoAttempt.isEmpty()){
+                System.out.println("Bob: 'Fine. Be that way!'");
+            } else if(convoAttempt.endsWith("?")){
+                System.out.println("Bob: 'Sure.'");
+            }else if(convoAttempt.endsWith("!")){
+                System.out.println("Bob: 'Whoa, chill out!'");
+            } else if(convoAttempt .equals("Bye")){
+                System.out.println("Bob: 'Later.'");
+                bobIsStillTalking = false;
+            } else{
+                System.out.println("Bob: 'Whatever'");
             }
-            System.out.println(bob);
-            System.out.println("Do you want to continue attempt?");
-            answer = scanner.nextLine();
-        } while (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes"));
 
+        } while(bobIsStillTalking);
+
+        System.out.println("Bob walks away...");
 
 
 
