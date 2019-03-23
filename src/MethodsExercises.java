@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
-
     Scanner scanner = new Scanner(System.in);
+
 
     public static void main(String[] args) {
 
@@ -14,7 +14,17 @@ public class MethodsExercises {
 
 //        count(5);
 
-        getInteger(11, 20);
+//        getInteger(11, 20);
+
+
+        factorial();
+
+
+
+
+
+
+
 
     }
 //     1.   Basic Arithmetic
@@ -61,7 +71,7 @@ public class MethodsExercises {
         // method accepts a number given from a user
             //determines if the number is within the range of min-max
                 //use boolean to determine?
-            int number = 1;
+//            int number = 1;
             System.out.println("Enter a number between " + min + " and " + max);
             Scanner scannerTwo = new Scanner(System.in);
             int userInput = scannerTwo.nextInt();
@@ -73,22 +83,61 @@ public class MethodsExercises {
                 System.out.println("Your number is out of range: ");
                 getInteger(min, max);
             }
-             return number;
+
+            //I don't know what else to return even though not really using this for anything
+             return userInput;
         }
 
 
 
-//    public static void count(int n) {
-//        if (n <= 0) {
-//            System.out.println("All done!");
-//            return;
+
+
+        // 3. Calculate the factorial of a number.
+
+//        static int factorial(int userInt){
+//
+//        //Prompt the user to enter an integer from 1 to 10.
+//        //Assume that the user will enter an integer, but verify it’s between 1 and 10.
+//
+//        //Use the long type to store the factorial.
+//            long fact = 1;
+//        // Use a for loop to calculate the factorial.
+//            for(int i = 1; i < userInt; i ++){
+//                fact = fact * i;
+//            }
+//            System.out.println(fact);
+//        //Display the factorial of the number entered by the user.
+//
+//
+//
+//
+////    Ask if the user wants to continue.
+////    Continue only if the user agrees to.
+//
+//
+//
+//
+//            return userInt;
+//
 //        }
-//        System.out.println(n);
-//        count(n - 1);
-//    }
 
+// Example from javatpoint.com
 
+        static int factorial() {
 
+            System.out.println("Enter and integer between 1 and 10.");
+            Scanner scannerThree = new Scanner(System.in);
+            int userInt = scannerThree.nextInt();//It is the number to calculate factorial
+            int i;
+            long fact = 1;
+            for (i = 1; i <= userInt; i++) {
+                fact = fact * i;
+                System.out.println(fact);
+            }
+            System.out.println("Factorial of " + userInt + " is: " + fact);
+
+            return i;
+        }
 
 //This is the closing for the class MethodsExercises: do not go below this line!
 }
