@@ -2,40 +2,45 @@ import java.util.Scanner;
 
 public class HighLow {
 
+    public static void gameFunctions(){
 
 
-    public static void main(String[] args) {
+        boolean keepGoing = false;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Pick a number between 1 and 100.");
+        do{
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Pick a number between 1 and 100.");
 
-        double random;
-        double answer;
-        random = Math.round(Math.floor(Math.random() *100 +1));
-        String choice;
-        boolean keepGoing = true;
-        do {
-            do {
-                answer = scanner.nextDouble();
-                if (answer > random) {
-                    System.out.println("LOWER");
-                } else if (answer < random) {
-                    System.out.println("HIGHER");
-                } else if (answer == random) {
-                    System.out.println("GOOD GUESS");
-                }
-            } while (answer != random);
+            double random;
+            double answer;
+            random = Math.round(Math.floor(Math.random() *100 +1));
+            System.out.println(random);
+            String choice;
 
-            System.out.println("do you want to go play again?");
-            choice = scanner.next();
+                do {
+                    answer = scanner.nextDouble();
+                    if (answer > random) {
+                        System.out.println("LOWER");
+                    } else if (answer < random) {
+                        System.out.println("HIGHER");
+                    } else if (answer == random) {
+                        System.out.println("GOOD GUESS");
+                    }
+                } while (answer != random);
 
-            if(choice.charAt(0) == 'n'){
-                keepGoing = false;
-            } else if(choice.charAt(0) == 'y'){
-                keepGoing = true;
-            }
+//                System.out.println("do you want to go play again?");
+//                choice = scanner.next();
+//
+//                if(choice.equals("y")){
+//                    keepGoing = true;
+//                }
 
         } while(keepGoing);
+    }
+
+    public static void main(String[] args) {
+        gameFunctions();
+
 
     }
 
