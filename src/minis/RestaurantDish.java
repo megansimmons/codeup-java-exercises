@@ -1,15 +1,46 @@
 package minis;
 
 public class RestaurantDish {
-    public int costInCents;
-    public String nameOfDish;
-    public boolean wouldRecommend;
+    private int costInCents;
+    private String nameOfDish;
+    private boolean wouldRecommend;
 
-    public void eat(){
+    private void eat(){
         System.out.println("Nom nom nom!");
     }
 
-    /*RestaurantDish dish = new RestaurantDish(){
+
+
+    public int getCostInCents(){
+        return this.costInCents;
+    }
+
+    public void setCostInCents(int costInCents){
+        this.costInCents = costInCents;
+    }
+
+    public String getNameOfDish(){
+        return this.nameOfDish;
+    }
+
+    public void setNameOfDish(String nameOfDish){
+        this.nameOfDish = nameOfDish;
+    }
+
+
+    public boolean getWouldRecommend(){
+        return this.wouldRecommend;
+    }
+
+    public void setWouldRecommend(boolean wouldRecommend) {
+        this.wouldRecommend = wouldRecommend;
+    }
+
+  /*  public static void main(String[] args) {
+
+        RestaurantDish dish = new RestaurantDish(){
+
+        }
 
     }*/
 
