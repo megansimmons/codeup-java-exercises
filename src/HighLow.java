@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class HighLow {
 
-    public static void gameFunctions(){
+    public static void gameFunction(){
 
 
         boolean keepGoing = false;
 
-        do{
+        do {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Pick a number between 1 and 100.");
 
@@ -28,18 +28,18 @@ public class HighLow {
                     }
                 } while (answer != random);
 
-//                System.out.println("do you want to go play again?");
-//                choice = scanner.next();
-//
-//                if(choice.equals("y")){
-//                    keepGoing = true;
-//                }
+                System.out.println("do you want to go play again?");
+                choice = scanner.next();
+
+                if(choice.equals("y")){
+                    keepGoing = true;
+                }
 
         } while(keepGoing);
     }
 
     public static void main(String[] args) {
-        gameFunctions();
+        gameFunction();
 
 
     }
