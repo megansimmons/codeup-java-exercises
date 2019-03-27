@@ -38,7 +38,7 @@ public class Input {
 
         while (userInput < min || userInput > max) {
 
-            System.out.println("Your number is out of range, try again: ");
+            System.out.println("Your number is out of range: ");
 
             userInput = scanner.nextInt();
 
