@@ -48,18 +48,18 @@ public class ArraysExercises {
 
         Person newbOne = new Person("Emily");
 
-        Person newbTwo = new Person("Sabita");
-
-        Person newbThree = new Person("Fourth Marcus");
+//        Person newbTwo = new Person("Sabita");
+//
+//        Person newbThree = new Person("Fourth Marcus");
 
         Person[] copy = ArraysExercises.addPerson(objects, newbOne);
 
-        Person[] copy2 = ArraysExercises.addPerson(objects, newbThree);
+//        Person[] copy2 = ArraysExercises.addPerson(objects, newbThree);
 
 
 
-     for(int i = 0; i < copy2.length; i +=1){
-         System.out.println(copy2[i].getName());
+     for(int i = 0; i < copy.length; i +=1){
+         System.out.println(copy[i].getName());
      }
 
     }
@@ -69,8 +69,8 @@ public class ArraysExercises {
         public static Person[] addPerson(Person[] objects, Person addNewb){
 
 
-            Person[] copy;
-            copy = Arrays.copyOf(objects, objects.length + 1);
+
+            Person[] copy = Arrays.copyOf(objects, objects.length + 1);
 
             copy[objects.length] = addNewb;
 
