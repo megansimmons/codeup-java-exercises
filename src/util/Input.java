@@ -1,39 +1,86 @@
 package util;
+
 import java.util.Scanner;
 
 
 public class Input {
 
-    private Scanner scanner = new Scanner(System.in);
 
-    public static String getString(){
-        return "";
+   private Scanner scanner;
+
+
+   public Input(){
+
+       scanner = new Scanner(System.in);
+
+   }
+
+    public  String getString(){
+        return scanner.nextLine();
     }
 
     public boolean yesNo(){
-        return true;
+        System.out.println("yes/no");
+        String userInput = scanner.next();
+        return (userInput.equalsIgnoreCase("y")|| userInput.equalsIgnoreCase("yes"));
+
     }
 
 
 
 
-    public static int getInteger(int min, int max) {
-        int output;
-        Scanner sc = new Scanner(System.in);
-        while(!sc.hasNextInt()){
-            System.out.printf("Invalid input. Enter a valid integer between %d and %d: ", min, max);
-            sc.next();
+    public int getInt(int min, int max) {
+
+        System.out.println("Enter a number between " + min + " and " + max);
+
+        int userInput = scanner.nextInt();
+
+
+        while (userInput < min || userInput > max) {
+
+            System.out.println("Your number is out of range, try again: ");
+
+            userInput = scanner.nextInt();
+
+
         }
-        output = sc.nextInt();
-        if(output < min || output > max) {
-            System.out.printf("Invalid range. Enter a valid integer between %d and %d: ", min, max);
-            return getInteger(min, max);
+
+        System.out.println("Your number " + userInput + " is valid!");
+
+        return userInput;
+    }
+
+    public int getInt(){
+        System.out.println("Enter an integer");
+       return scanner.nextInt();
+    }
+
+
+    public double getDouble(double min, double max) {
+
+        System.out.println("Enter a number between " + min + " and " + max);
+
+        double userInput = scanner.nextDouble();
+
+
+        while (userInput < min || userInput > max) {
+
+            System.out.println("Your number is out of range, try again: ");
+
+            userInput = scanner.nextDouble();
+
+
         }
-        return output;
+
+        System.out.println("Your number " + userInput + " is valid!");
+
+        return userInput;
+    }
+
+    public double getDouble(){
+        System.out.println("Enter an integer");
+        return scanner.nextDouble();
     }
 
 
-    public static void main(String[] args) {
-
-    }
 }
