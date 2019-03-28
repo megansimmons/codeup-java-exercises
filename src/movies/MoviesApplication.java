@@ -23,6 +23,7 @@ public class MoviesApplication {
             "3 - view movies in the drama category\n" +
             "4 - view movies in the horror category\n" +
             "5 - view movies in the scifi category\n";
+
     }
 
 
@@ -101,10 +102,6 @@ public class MoviesApplication {
         //method for running application
 
         movieApp.runApp();
-
-
-
-
 
     }
 
