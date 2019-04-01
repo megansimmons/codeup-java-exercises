@@ -57,23 +57,26 @@ public class ControlFlowExercises {
 
         // THIS WORKS if you use long because the int data type gets too full
 
-//        long k = 2;
-//        do {
-//            k *= k;
-//            System.out.println(k);
-//        } while (k < 1000000);
+/*        long k = 2;
+
+        do {
+
+            System.out.println(k);
+            k *= k;
+
+        } while (k < 1000000);*/
 
 
 //        For
 //
 //        refactor the previous two exercises to use a for loop instead
 
-//        int m = 0;
-//        for (m = 0; m <= 100; m++){
-//            if (m % 2==0){
-//                System.out.println(m);
-//            }
-//        }
+        int m = 0;
+        for (m = 0; m <= 100; m++){
+            if (m % 2==0){
+                System.out.println(m);
+            }
+        }
 
 //        int b = 100;
 //        for (b = 100; b >= -10; b--){

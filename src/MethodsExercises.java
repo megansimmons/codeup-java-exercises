@@ -1,30 +1,11 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
 
     static Scanner scanner = new Scanner(System.in);
 
 
-    public static void main(String[] args) {
-
-/*        System.out.println(addition(5,4));
-        System.out.println(subtraction(10, 4));
-        System.out.println(multiplication(5,4));
-        System.out.println(division(20,2));
-        System.out.println(modulus(20,4));
-
-        count(5); */
-
-//      int x = getInteger(11, 20);
-
-//        System.out.println(x);
-
-        int i = getInteger(1, 10);
-
-        factorial(i);
-
-
-    }
 /*     1.   Basic Arithmetic
 
        a. Create four separate methods. Each will perform an arithmetic operation:
@@ -122,7 +103,7 @@ public class MethodsExercises {
 
                 System.out.println("Factorial of " + i + " is: " + fact);
 
-            System.out.println("Would you like to continue?");
+                System.out.println("Would you like to continue?");
 
                 String answer = scanner.next();
 
@@ -236,6 +217,49 @@ public class MethodsExercises {
 
 
 
+    public static void main(String[] args) {
+
+/*        System.out.println(addition(5,4));
+        System.out.println(subtraction(10, 4));
+        System.out.println(multiplication(5,4));
+        System.out.println(division(20,2));
+        System.out.println(modulus(20,4));
+
+        count(5); */
+
+//      int x = getInteger(11, 20);
+
+//        System.out.println(x);
+
+        /*int i = getInteger(1, 10);
+
+        factorial(i);*/
+
+/*        public static int rollDie(int sides) {
+            Random r = new Random();
+            return r.nextInt(sides) + 1;
+        }
+
+        public static String rollDice(int sides) {
+            return String.format("%d and %d", rollDie(sides), rollDie(sides));
+        }
+
+        public static void processDice() {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Please choose a number of sides for the dice");
+            int sides = getInteger(1, 50);
+            do {
+                System.out.println("Rolling dice...");
+                System.out.println("You rolled " + rollDice(sides));
+                System.out.println("Do you wish to roll again [y/n]?");
+            } while(sc.next().equals("y"));
+        }*/
+
+
+
+
+
+    }
 
 
 }

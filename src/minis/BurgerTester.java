@@ -1,3 +1,4 @@
+/*
 package minis;
 
 public class BurgerTester {
@@ -19,3 +20,4 @@ public class BurgerTester {
 
 
 }
+*/

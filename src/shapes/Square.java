@@ -6,9 +6,12 @@ public class Square extends Quadrilateral {
 
     Because the length of all sides of a square are the same, the methods for setting the length and the width should set both protected properties.*/
 
-  /*  public void setLength() {}
 
-    public void setWidth() {};*/
+
+    public Square(int side) {
+        super(side, side);
+
+    }
 
     public void setLength(int length){
         this.length = length;
@@ -22,11 +25,13 @@ public class Square extends Quadrilateral {
 
 
     public double getPerimeter() {
-        return 0;
+        return 2 * this.length + 2 * this.width;
     }
 
     public double getArea() {
-        return 0;
+        return this.length * this.width;
     }
+
+
 
 }

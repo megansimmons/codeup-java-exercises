@@ -38,6 +38,8 @@ public class HighLow {
         } while(keepGoing);
     }
 
+
+
     public static void main(String[] args) {
         gameFunction();
 

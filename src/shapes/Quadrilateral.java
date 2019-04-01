@@ -12,10 +12,10 @@ abstract class Quadrilateral extends Shape implements Measurable {
     protected int length;
     protected int width;
 
-    public Quadrilateral(){
+
+    //is default constructor necessary for creating setter in subclass?
 
 
-    }
 
     public Quadrilateral(int length, int width){
         this.length = length;
@@ -30,9 +30,9 @@ abstract class Quadrilateral extends Shape implements Measurable {
         return this.width;
     }
 
-    abstract void setLength();
+    abstract void setLength(int length);
 
-    abstract void setWidth();
+    abstract void setWidth(int width);
 
 
 }
